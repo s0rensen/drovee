@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
-        <nav>
-            <div class="logo">LOGO</div>
+        <nav v-scroll-class:scroll=1>
+            <div class="logo">Drovee</div>
             <ul>
                 <li class="nav-item" v-for="link in links" v-bind:key="link.page">
 					<router-link class="nav-link" :to=link.page>{{link.text}}</router-link>
@@ -12,9 +12,13 @@
 </template>
 
 <script>
+import VueScrollClass from 'vue-scroll-class';
+
 export default {
-    name: 'menu',
+    name: 'navbar',
 	data() { 
+		scrollPosition: null;
+		scrollBoolean: null;
 		return {
 			links: [ 
 				{ 
@@ -29,12 +33,23 @@ export default {
 				}
 			] 
 		}
-	}
+	},
+
+	methods: {
+	},
+
+	mounted() {
+	},
+
+	directives: {
+		'scroll-class': VueScrollClass,
+	},
 }
 </script>
 
 <style lang="scss">
 @import '../css/navbar.scss';
+@import '../css/config';
 </style>
 
 
