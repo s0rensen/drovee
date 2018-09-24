@@ -1,6 +1,9 @@
 <template>
     <main class="home">
         <div class="header">
+                <video autoplay muted loop class="vid">
+                    <source src="../assets/img/bgDrone.mp4" type="video/mp4">
+                </video>
             <h1 class="bigLogo">Drovee</h1>
             <h2 class="slogan">Food on the fly.</h2>
         </div>

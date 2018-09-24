@@ -10,7 +10,10 @@ const router = new Router({
     {
       path: '/home',
       name: 'home',
-      component: home
+      component: home,
+      meta: {
+        title: 'Drovee - Food on the fly'
+      }
     },
     {
       path: '/team',
