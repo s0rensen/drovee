@@ -1,0 +1,41 @@
+<template>
+	<div class="wrapper">
+        <nav>
+            <div class="logo">LOGO</div>
+            <ul>
+                <li class="nav-item" v-for="link in links" v-bind:key="link.page">
+					<router-link class="nav-link" :to=link.page>{{link.text}}</router-link>
+				</li>
+            </ul>
+        </nav>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'menu',
+	data() { 
+		return {
+			links: [ 
+				{ 
+					id: 0,
+					text: 'Home', 
+					page: '/home' 
+				},
+				{ 
+					id: 1,
+					text: 'Team', 
+					page: '/team' 
+				}
+			] 
+		}
+	}
+}
+</script>
+
+<style lang="scss">
+@import '../css/navbar.scss';
+</style>
+
+
+
