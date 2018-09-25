@@ -2,7 +2,7 @@
     <main class="home">
         <div class="header">
             <video autoplay muted loop class="vid">
-                <source src="../assets/img/bgDrone.mp4" type="video/mp4">
+                <source src="../assets/img/bgDroneSmall.mp4" type="video/mp4">
             </video>
             <div class="headerText">
                 <h1 class="bigLogo">Drovee</h1>
