@@ -11,6 +11,10 @@ export default {
   name: 'App',
   components: {
     'navbar': navbar
+  },
+  metaInfo: {
+    title: 'Food on the fly',
+    titleTemplate: 'Drovee - %s'
   }
 }
 </script>
