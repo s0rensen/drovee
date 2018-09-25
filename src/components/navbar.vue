@@ -26,11 +26,11 @@ export default {
 					text: 'Home', 
 					page: '/home' 
 				},
-				{ 
-					id: 1,
-					text: 'Team', 
-					page: '/team' 
-				}
+//				{ 
+//					id: 1,
+//					text: 'Team', 
+//					page: '/team' 
+//				}
 			] 
 		}
 	},
