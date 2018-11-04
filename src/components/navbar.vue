@@ -1,7 +1,8 @@
 <template>
 	<div class="wrapper">
         <nav v-scroll-class:scroll=1>
-            <div class="logo">Drovee</div>
+			<router-link class="logo" to='/'>Drovee</router-link>
+            <!-- <div class="logo">Drovee</div> -->
             <ul>
                 <li class="nav-item" v-for="link in links" v-bind:key="link.page">
 					<router-link class="nav-link" :to=link.page>{{link.text}}</router-link>
@@ -17,20 +18,23 @@ import VueScrollClass from 'vue-scroll-class';
 export default {
     name: 'navbar',
 	data() { 
-		scrollPosition: null;
-		scrollBoolean: null;
 		return {
 			links: [ 
 				{ 
 					id: 0,
 					text: 'Home', 
-					page: '/home' 
+					page: '/' 
 				},
 //				{ 
 //					id: 1,
 //					text: 'Team', 
 //					page: '/team' 
-//				}
+//				},
+				{
+					id: 2,
+					text: 'Web-design',
+					page: '/webdesign'
+				}
 			] 
 		}
 	},

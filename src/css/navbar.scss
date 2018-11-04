@@ -10,12 +10,13 @@ nav {
     left: 0;
     width: 100%;
     height: 10vh;
-    padding: 10px 10vh;
+    padding: 10px 5vw;
     box-sizing: border-box;
     transition: .3s;
     z-index: 2;
 
-    & div.logo {
+    & .logo {
+        text-decoration: none;
         padding: 5px;
         height: 8vh;
         float: left;
