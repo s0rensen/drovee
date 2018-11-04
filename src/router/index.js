@@ -28,5 +28,4 @@ const router = new Router({
     }
   ]
 })
-// router.replace({path: 'home'})
 export default router
