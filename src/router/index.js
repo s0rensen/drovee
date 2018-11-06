@@ -4,6 +4,13 @@ import Meta from 'vue-meta'
 
 import home from '@/components/home'
 import team from '@/components/team'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faCaretDown)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.config.productionTip = false
 
 
 Vue.use(Router)

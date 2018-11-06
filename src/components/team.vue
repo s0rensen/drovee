@@ -9,6 +9,10 @@
             <div class="titleL">Who are we?</div>
             <div class="titleS">Meet the Drovee team.</div>
         </div>
+        <div class="iconWrapper">
+            <h4>Click me!</h4>
+            <font-awesome-icon icon="caret-down" class="downIcon" />
+        </div>
         <div class="pages profile1">
         </div>
         <div class="pages profile2">
@@ -25,6 +29,10 @@ export default {
     name: 'team',
     metaInfo: {
         title: 'Team',
+    },
+
+    methods: {
+
     }
 }
 </script>
