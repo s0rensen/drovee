@@ -24,15 +24,10 @@ export default {
 					text: 'Home', 
 					page: '/' 
 				},
-//				{ 
-//					id: 1,
-//					text: 'Team', 
-//					page: '/team' 
-//				},
-				{
-					id: 2,
-					text: 'Web-design',
-					page: '/webdesign'
+				{ 
+					id: 1,
+					text: 'Team', 
+					page: '/team' 
 				}
 			],
 		}

@@ -20,8 +20,9 @@
     data() {
       return {
         lightLogo: Boolean,
+        //Array of pages that need light logo
         lightLogos: [
-          "webdesign"
+          "team"
         ]
       }
     },
