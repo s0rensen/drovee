@@ -5,9 +5,13 @@
             <div class="stars2"></div>
             <div class="stars3"></div>
         </div>
-        <div class="pages titleWrapper">
-            <div class="titleL">{{ mainTitle }}</div>
-            <div class="titleS">{{ subTitle }}</div>
+        <div class="pages titleWrapper" :class="{ titleHigh: titleScreen }">
+            <div class="container1">
+                <div class="titleL" :class="{ vertTrans: titleInvis }">{{ mainTitle }}</div>
+            </div>
+            <div class="container2">
+                <div class="titleS" :class="{ vertTransS: titleInvis }">{{ subTitle }}</div>
+            </div>
         </div>
         <div class="iconWrapper">
             <div class="smallIconWrapper" @click="animate">
@@ -32,8 +36,11 @@ export default {
     name: 'team',
     data() {
         return {
+            show: true,
             up: false,
+            titleInvis: false,
             pageCounter: 0,
+            titleScreen: false,
             mainTitle: 'Who are we?',
             subTitle: 'Meet the Drovee team.',
             profiles: [
@@ -85,7 +92,16 @@ export default {
 
     methods: {
         animate() {
-            this.changeTitle();
+            this.toggleLargeTitle()
+            var self = this;
+            setTimeout(function() {
+                self.changeTitle();
+                self.toggleLargeTitle();
+            }, 1000);
+        },
+
+        toggleLargeTitle() {
+            this.$data.titleInvis = !this.$data.titleInvis;
         },
 
         changeTitle() {
@@ -93,6 +109,8 @@ export default {
             else this.$data.pageCounter += 1;
             if(this.$data.pageCounter === 4) this.$data.up = true;
             else this.$data.up = false;
+            if(this.$data.pageCounter === 0) this.$data.titleScreen = false;
+            else this.$data.titleScreen = true;
             this.$data.mainTitle = this.$data.profiles[this.$data.pageCounter].name;
             this.$data.subTitle = this.$data.profiles[this.$data.pageCounter].title;
         }

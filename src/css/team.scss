@@ -77,11 +77,23 @@ to {
 }
 
 // Title text
+.titleWrapper, .titleL, .titleS {
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.titleHigh {
+  transform: translateY(-20%);
+}
+
 .titleWrapper {
   text-align: center;
   font-family: 'lato',sans-serif;
 
-  .titleL{
+  & .titleL{
     margin: auto;
     margin-top: 20vh;
     font-weight: 500;
@@ -90,6 +102,15 @@ to {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    &.vertTrans {
+      transform: translateY(100%);
+    }
+  }
+
+  .container1, .container2 {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   .titleS {
@@ -99,9 +120,12 @@ to {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    &.vertTransS {
+      transform: translateY(-100%);
+    }
   }
 }
-
 //Profiles
 
 // Starry background
