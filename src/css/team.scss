@@ -9,12 +9,19 @@
 
 .iconWrapper {
   width: 100vw;
-  height: 70px;
+  height: 50px;
   position: fixed;
   bottom: 0;
   text-align: center;
   animation: bounce 2s infinite alternate;
   -webkit-animation: bounce 2s infinite alternate;
+
+  & .smallIconWrapper {
+    cursor: pointer;
+    width: 8%;
+    margin: auto;
+    z-index: 10;
+  }
 
   & h4 {
     color: white;
@@ -24,6 +31,7 @@
 }
 
 .downIcon {
+  margin-top: -20px;
   color: white;
   font-size: 4rem;
 }
@@ -46,10 +54,8 @@ to {
 }
 
 .pages {
-  height: 80%;
   width: 80%;
   margin: auto;
-  // padding: 10%;
   z-index: 1;
   position: relative;
 }
