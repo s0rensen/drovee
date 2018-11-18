@@ -48,7 +48,7 @@ export default {
                 {
                     id: 0,
                     name: "Who are we?",
-                    title: "Meet the drove team",
+                    title: "Meet the Drovee team.",
                     text: '',
                 },
                 {
