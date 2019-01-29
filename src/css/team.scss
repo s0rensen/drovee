@@ -54,30 +54,33 @@ to {
 }
 
 .pages {
-  width: 80%;
+  width: 60%;
+  height: 50%;
   margin: auto;
   z-index: 1;
   position: relative;
+  top: 100%;
+
 }
 
-.profile1 {
+#prof1 {
   background: yellow;
 }
 
-.profile2 {
+#prof2 {
   background: red;
 }
 
-.profile3 {
+#prof3 {
   background: green;
 }
 
-.profile4 {
+#prof4 {
   background: blue;
 }
 
 // Title text
-.titleWrapper, .titleL, .titleS {
+.titleWrapper, .titleL, .titleS, .pages {
   -webkit-transition: 1.5s;
   -moz-transition: 1.5s;
   -ms-transition: 1.5s;

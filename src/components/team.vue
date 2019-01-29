@@ -5,7 +5,7 @@
             <div class="stars2"></div>
             <div class="stars3"></div>
         </div>
-        <div class="pages titleWrapper" :class="{ titleHigh: titleScreen }">
+        <div class="titleWrapper" :class="{ titleHigh: titleScreen }">
             <div class="container1">
                 <div class="titleL" :class="{ vertTrans: titleInvis }">{{ mainTitle }}</div>
             </div>
@@ -20,13 +20,13 @@
                 <font-awesome-icon icon="caret-down" class="downIcon" v-else/>
             </div>
         </div>
-        <div class="pages profile1">
+        <div class="pages" id="prof1">
         </div>
-        <div class="pages profile2">
+        <div class="pages" id="prof2">
         </div>
-        <div class="pages profile3">
+        <div class="pages" id="prof3">
         </div>
-        <div class="pages profile4">
+        <div class="pages" id="prof4">
         </div>
     </div>
 </template>
@@ -96,6 +96,7 @@ export default {
             var self = this;
             setTimeout(function() {
                 self.changeTitle();
+                self.getBox();
                 self.toggleLargeTitle();
             }, 1000);
         },
@@ -113,6 +114,14 @@ export default {
             else this.$data.titleScreen = true;
             this.$data.mainTitle = this.$data.profiles[this.$data.pageCounter].name;
             this.$data.subTitle = this.$data.profiles[this.$data.pageCounter].title;
+        },
+
+        getBox() {
+            if(this.$data.pageCounter === 1) var c = document.getElementById('prof4');
+            else var c = document.getElementById('prof'.concat(this.$data.pageCounter - 1));
+            var d = document.getElementById('prof'.concat(this.$data.pageCounter));
+            c.style.top = '100%';
+            d.style.top = '0';
         }
     }
 }
